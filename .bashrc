@@ -15,3 +15,4 @@ export EDITOR=nvim
 bind 'set enable-bracketed-paste off'
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+source /usr/share/nvm/init-nvm.sh
