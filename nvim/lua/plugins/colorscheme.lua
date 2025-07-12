@@ -1,8 +1,18 @@
+-- return {
+--   "bluz71/vim-moonfly-colors",
+--   name = "moonfly",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     vim.g.moonflyTransparent = false
+--     vim.cmd("colorscheme moonfly")
+--   end,
+-- }
 return {
   "folke/tokyonight.nvim",
   priority = 1000,
   config = function()
-    local transparent = false -- set to true if you would like to enable transparency
+    local transparent = true -- set to true if you would like to enable transparency
 
     local bg = "#011628"
     local bg_dark = "#011423"

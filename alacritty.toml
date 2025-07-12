@@ -4,7 +4,7 @@ TERM = "xterm-256color"
 
 [window]
 
-opacity = 1
+opacity = 0.8
 blur = true
 decorations = "Buttonless"
 
@@ -15,6 +15,5 @@ size = 11.50
 
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/night_owl.toml"
-    # "~/.config/alacritty/themes/themes/tokyo-night-storm.toml"
+    "~/.config/alacritty/themes/themes/moonfly.toml"
 ]
