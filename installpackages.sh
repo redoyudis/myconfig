@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo pacman -S --needed git base-devel
-sudo pacman -S --needed tmux alacritty ripgrep
+sudo pacman -S --needed tmux alacritty ripgrep fzf fd
 
 cd ~
 git clone https://aur.archlinux.org/yay.git
