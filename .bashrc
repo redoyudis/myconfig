@@ -8,9 +8,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-PS1="\[\033[1;32m\]\w:\[\033[0m\]\$ "
-#PS1="\e[1;32m\w:\e[m\$ "
-
 export EDITOR=nvim
 
 bind 'set enable-bracketed-paste off'
@@ -25,7 +22,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Prefer fd if available (even faster)
 if command -v fd >/dev/null 2>&1; then
-  export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+  export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow  --exclude .git'
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 fi
 
@@ -66,3 +63,33 @@ fi
 neofetch
 
 set -o vi
+
+is_git() {
+  git rev-parse --is-inside-work-tree &>/dev/null
+}
+
+git_branch() {
+  is_git || return 1
+
+  local branch
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null) || return 1
+
+  printf "%s" "$branch"
+}
+
+print_open_bracket_if_git() {
+  is_git && printf "["
+}
+
+print_close_bracket_if_git() {
+  is_git && printf "]"
+}
+
+# --- Colors ---
+YELLOW="\[\e[33m\]"
+LIGHT_BLUE="\[\e[94m\]"
+RED="\[\e[31m\]"
+RESET="\[\e[0m\]"
+
+# --- PS1 ---
+PS1="${YELLOW}❯ ${LIGHT_BLUE}\W ${LIGHT_BLUE}\$(print_open_bracket_if_git)${RED}\$(git_branch)${LIGHT_BLUE}\$(print_close_bracket_if_git)${LIGHT_BLUE}: ${RESET}"
