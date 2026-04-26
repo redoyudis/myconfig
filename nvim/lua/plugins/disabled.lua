@@ -1,6 +1,6 @@
 return {
-  -- disable trouble
+  -- disable flash
   { "folke/flash.nvim", enabled = false },
-  { "echasnovski/mini.nvim", enabled = false },
-  { "echasnovski/mini.pairs", enabled = false },
+  { "nvim-mini/mini.nvim", enabled = false },
+  { "nvim-mini/mini.pairs", enabled = false },
 }

@@ -93,3 +93,6 @@ RESET="\[\e[0m\]"
 
 # --- PS1 ---
 PS1="${YELLOW}❯ ${LIGHT_BLUE}\W ${LIGHT_BLUE}\$(print_open_bracket_if_git)${RED}\$(git_branch)${LIGHT_BLUE}\$(print_close_bracket_if_git)${LIGHT_BLUE}: ${RESET}"
+
+# opencode
+export PATH=/home/redo/.opencode/bin:$PATH
