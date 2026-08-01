@@ -5,8 +5,7 @@
     "messages_half_page_down": "ctrl+alt+d,ctrl+d",
     "messages_half_page_up": "ctrl+alt+u,ctrl+u",
     "messages_next": "ctrl+l",
-    "messages_previous": "ctrl+h",
-
+    "messages_previous": "ctrl+h"
   }
 }
 
