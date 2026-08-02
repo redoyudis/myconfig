@@ -54,13 +54,13 @@ fif() {
 # Other tools and startup stuff
 # -----------------------------
 
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
   exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
 
-neofetch
+# neofetch
 
 set -o vi
 
@@ -96,3 +96,6 @@ PS1="${YELLOW}❯ ${LIGHT_BLUE}\W ${LIGHT_BLUE}\$(print_open_bracket_if_git)${RE
 
 # opencode
 export PATH=/home/redo/.opencode/bin:$PATH
+
+# opencode
+export PATH=/home/redoyudistiranda/.opencode/bin:$PATH
