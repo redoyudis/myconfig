@@ -99,3 +99,7 @@ export PATH=/home/redo/.opencode/bin:$PATH
 
 # opencode
 export PATH=/home/redoyudistiranda/.opencode/bin:$PATH
+
+# opencode: websearch toggle
+alias oc="opencode"
+alias ocs="OPENCODE_ENABLE_EXA=1 opencode"
