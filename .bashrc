@@ -103,3 +103,6 @@ export PATH=/home/redoyudistiranda/.opencode/bin:$PATH
 # opencode: websearch toggle
 alias oc="opencode"
 alias ocs="OPENCODE_ENABLE_EXA=1 opencode"
+
+# Pi
+export PATH="$HOME/.local/bin:$PATH"
